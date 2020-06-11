@@ -21,7 +21,7 @@ const MostVoted = () => {
     }
 
     if (error) {
-        console.log(error)
+        // console.log(error)
         return  <SnackBarMessage message={"there was an error while creating a vote"} openFlag={true} />
     }
 

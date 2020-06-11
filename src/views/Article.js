@@ -6,6 +6,7 @@ import ThumbsUp from '../components/ThumbsUp';
 import SnackBarMessage from "../components/SnackBarMessage";
 import SimilarArticles from "../components/SimilarArticles";
 import Loading from "../components/Loading";
+import NavBar from "../components/NavBar";
 
 const GET_ARTICLE  = gql`
 query Article($articleId: Int!) {
@@ -33,7 +34,8 @@ const Article = ({ articleId }) => {
     if (error) {
        console.log(error)
        return  <SnackBarMessage message={"there was an error while fetching data"} openFlag={true} />
-    };
+    }
+    
 
 
 
@@ -41,59 +43,64 @@ const Article = ({ articleId }) => {
     const token = localStorage.getItem('token')
     console.log(token)
     return (
-        <Container >
+        <div>
+            <NavBar />
+            <Container >
 
 
-            <br />
 
-            <Card>
-                <CardContent>
-                    <Typography variant = 'h5' component = "h2">
-                        {data.article.title}
-                    </Typography>
+                <br />
 
-                    <br/>
-                    <Divider />
+                <Card>
+                    <CardContent>
+                        <Typography variant = 'h5' component = "h2">
+                            {data.article.title}
+                        </Typography>
 
-                    <br />
+                        <br/>
+                        <Divider />
 
-
-                    <Typography variant="body2" component = "p" align="justify">
-                        {data.article.summary}
-
-                    </Typography>
-                </CardContent>
-
-                <Divider />    
-                <CardActions>
-                {token?  (
-                    <div>
-                        <p>this really help?</p> 
                         <br />
-                        <ThumbsUp articleId = {articleId} />
 
 
-                    </div>
-                ) : ''}
-                    
-                </CardActions>
-                
+                        <Typography variant="body2" component = "p" align="justify">
+                            {data.article.summary}
 
-                
+                        </Typography>
+                    </CardContent>
 
-           
+                    <Divider />
+                    <CardActions>
+                        {token?  (
+                            <div>
+                                <p>this really help?</p>
+                                <br />
+                                <ThumbsUp articleId = {articleId} />
 
-            </Card>
 
-            <br/> 
-            <br/> 
-            <p>Similar Articles</p>
-            <br/> 
-           <SimilarArticles articleId={articleId}/>
-        
+                            </div>
+                        ) : ''}
 
-            
-        </Container>
+                    </CardActions>
+
+
+
+
+
+
+                </Card>
+
+                <br/>
+                <br/>
+                <p>Similar Articles</p>
+                <br/>
+                <SimilarArticles articleId={articleId}/>
+
+
+
+            </Container>
+        </div>
+
     )
 }
 

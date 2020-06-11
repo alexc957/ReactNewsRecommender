@@ -10,18 +10,7 @@ import ArticleCard from './ArticleCard';
 import { useQuery } from '@apollo/react-hooks';
 import { gql } from 'apollo-boost';
 
-const GET_RECS = gql`
-query {
-    recommendations {
-        
-        article {
-            id
-            title
-            
-        } 
-    }
-}
-`
+
 const useStyles = makeStyles((theme) => ({
     root: {
       display: 'flex',

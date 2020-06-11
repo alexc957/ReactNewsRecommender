@@ -17,6 +17,7 @@ import { useMutation } from '@apollo/react-hooks';
 import { useNavigate } from "@reach/router"
 import SnackBarMessage from "../components/SnackBarMessage";
 import Loading from "../components/Loading";
+import NavBar from "../components/NavBar";
 
 const CREATE_USER = gql`
 mutation CreateUser($email: String!, $password: String!, $username: String! ) {
@@ -73,89 +74,100 @@ const SignUp = () => {
     }
 
     if(data) {
-        console.log(data);
+        //console.log(data);
 
         navigate('/login')
     }
     if(loading) {
-        console.log('loading');
-        return  <Loading />
+        // console.log('loading');
+        return  (<div>
+            <NavBar/>
+            <Loading />
+        </div>)
 
     }
     if(error) {
-        console.log('error',error);
-        return  <SnackBarMessage message={"there was an error while signing up "} openFlag={true} />
+        // console.log('error',error);
+         // return  <SnackBarMessage message={"there was an error while signing up "} openFlag={true} />
 
 
     }
     return (
-        <Container component="main" maxWidth="xs">
-          <CssBaseline />
+        <div>
+            <NavBar />
 
-          <div className={classes.paper}>
-            <Avatar> 
-              <LockOutlinedIcon />
-            </Avatar>
+            <Container component="main" maxWidth="xs">
+                <CssBaseline />
 
-            <Typography component = "h1" variant="h5">
-                Sign Up 
-            </Typography>  
+                <div className={classes.paper}>
+                    <Avatar>
+                        <LockOutlinedIcon />
+                    </Avatar>
 
-            <form className= {classes.form} noValidate onSubmit={signUpUser}>
-            <TextField
-            variant="outlined"
-            margin="normal"
-            required
-            fullWidth
-            id="email"
-            label="Email Address"
-            name="email"
-            autoComplete="email"
-            onChange = {(e) => setEmail(e.target.value)}
-            autoFocus
-          />
-          <TextField
-            variant="outlined"
-            margin="normal"
-            required
-            fullWidth
-            name="password"
-            label="Password"
-            type="password"
-            id="password"
-            onChange = {(e) => setPassword(e.target.value)}
-            autoComplete="current-password"
-          />
+                    <Typography component = "h1" variant="h5">
+                        Sign Up
+                    </Typography>
 
-        <TextField
-            variant="outlined"
-            margin="normal"
-            required
-            fullWidth
-            name="username"
-            label="username"
-            type="text"
-            id="username"
-            onChange = {(e) => setUsername(e.target.value)}
-            autoComplete="username"
-          />
+                    <form className= {classes.form} noValidate onSubmit={signUpUser}>
+                        <TextField
+                            variant="outlined"
+                            margin="normal"
+                            required
+                            fullWidth
+                            id="email"
+                            label="Email Address"
+                            name="email"
+                            autoComplete="email"
+                            onChange = {(e) => setEmail(e.target.value)}
+                            autoFocus
+                        />
+                        <TextField
+                            variant="outlined"
+                            margin="normal"
+                            required
+                            fullWidth
+                            name="password"
+                            label="Password"
+                            type="password"
+                            id="password"
+                            onChange = {(e) => setPassword(e.target.value)}
+                            autoComplete="current-password"
+                        />
 
-        <Button
-            type="submit"
-            fullWidth
-            variant="contained"
-            color="primary"
-            className={classes.submit}
+                        <TextField
+                            variant="outlined"
+                            margin="normal"
+                            required
+                            fullWidth
+                            name="username"
+                            label="username"
+                            type="text"
+                            id="username"
+                            onChange = {(e) => setUsername(e.target.value)}
+                            autoComplete="username"
+                        />
 
-          >
-            Create Account
-        </Button>
-            </form>
+                        <Button
+                            type="submit"
+                            fullWidth
+                            variant="contained"
+                            color="primary"
+                            className={classes.submit}
 
-          </div>
-          
-            
-        </Container>
+                        >
+                            Create Account
+                        </Button>
+                    </form>
+
+                </div>
+
+                {
+                    error? (
+                        <SnackBarMessage message={"there was an error while signing up "} openFlag={true} />
+                    ) : ''
+                }
+            </Container>
+        </div>
     )
 }
 

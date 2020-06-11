@@ -46,7 +46,7 @@ const ArticleList = ({ search, page }) => {
     
       if (loading) return <Loading/>
       if (error) {
-        console.log(error)
+        //console.log(error)
         return  <SnackBarMessage message={"there was an error while fetching data"} openFlag={true} />
       } 
     
