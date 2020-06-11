@@ -83,8 +83,8 @@ const SignUp = () => {
 
     }
     if(error) {
-        console.log('error',error);
-        return  <SnackBarMessage message={"there was an error while signing up "} openFlag={true} />
+        // console.log('error',error);
+         // return  <SnackBarMessage message={"there was an error while signing up "} openFlag={true} />
 
 
     }
@@ -154,7 +154,11 @@ const SignUp = () => {
 
           </div>
           
-            
+            {
+                error? (
+                    <SnackBarMessage message={"there was an error while signing up "} openFlag={true} />
+                ) : ''
+            }
         </Container>
     )
 }

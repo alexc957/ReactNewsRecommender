@@ -81,7 +81,7 @@ export default function Login() {
     localStorage.setItem('token','');
     console.log('error', error);
 
-    return  <SnackBarMessage message={"there was an error while login"} openFlag={true} />
+  //  return  <SnackBarMessage message={"there was an error while login"} openFlag={true} />
 
   }
   if (loading) {
@@ -151,6 +151,9 @@ export default function Login() {
           
         </form>
       </div>
+      {error? (
+          <SnackBarMessage message={"there was an error while login"} openFlag={true} />
+      ) : ''}
    
     </Container>
   );

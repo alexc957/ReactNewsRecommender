@@ -19,8 +19,8 @@ const SnackBarMessage  = ({message, openFlag}) => {
 
             <Snackbar
                 anchorOrigin={{
-                    vertical: 'bottom',
-                    horizontal: 'left',
+                    vertical: 'top',
+                    horizontal: 'center',
                 }}
                 open={open}
                 autoHideDuration={6000}

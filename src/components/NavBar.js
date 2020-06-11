@@ -32,6 +32,7 @@ const NavBar = () => {
     // const theme = createMuiTheme();
     const classes = useStyles();
     // const navigate = useNavigate();
+    const token =localStorage.getItem('token');
   
       
      
@@ -56,7 +57,7 @@ const NavBar = () => {
 
                     </Typography>
                 
-                    {localStorage.getItem('token') ? (
+                    {token ? (
                         <Typography className={classes.rootLink}>
                             <Link href="/" color="inherit" onClick = {onLogOut}>Log Out</Link>
                         </Typography>

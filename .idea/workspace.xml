@@ -21,7 +21,17 @@
   <component name="ChangeListManager">
     <list default="true" id="174fb0a2-a388-48dc-828a-b3398aa6bff0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ArticlesList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ArticlesList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MostVoted.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MostVoted.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/NavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NavBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/RecentArticles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/RecentArticles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Recommendations.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Recommendations.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SingleLineGridList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SingleLineGridList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SnackBarMessage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SnackBarMessage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ThumbsUp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ThumbsUp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Article.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Article.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/SignUp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/SignUp.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +73,7 @@
       <option name="presentableId" value="Default" />
       <updated>1591899906054</updated>
       <workItem from="1591899907275" duration="20000" />
-      <workItem from="1591899927942" duration="2117000" />
+      <workItem from="1591899927942" duration="5351000" />
     </task>
     <servers />
   </component>
