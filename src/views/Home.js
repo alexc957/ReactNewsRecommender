@@ -71,6 +71,7 @@ const Home = () => {
 
     return (
         <div>
+            <NavBar />
           <Container>
 
             <br /> 

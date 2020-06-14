@@ -21,15 +21,17 @@
   <component name="ChangeListManager">
     <list default="true" id="174fb0a2-a388-48dc-828a-b3398aa6bff0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ArticlesList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ArticlesList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MostVoted.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MostVoted.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/asset-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/precache-manifest.fc13e2cbd43615c121ebeca1ec6bee97.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/service-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/service-worker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/2.aa776a45.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/2.aa776a45.chunk.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.d164b928.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/NavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NavBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/RecentArticles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/RecentArticles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Recommendations.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Recommendations.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SingleLineGridList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SingleLineGridList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SnackBarMessage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SnackBarMessage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ThumbsUp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ThumbsUp.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/Article.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Article.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Home.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Login.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/SignUp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/SignUp.js" afterDir="false" />
     </list>
@@ -73,7 +75,8 @@
       <option name="presentableId" value="Default" />
       <updated>1591899906054</updated>
       <workItem from="1591899907275" duration="20000" />
-      <workItem from="1591899927942" duration="5351000" />
+      <workItem from="1591899927942" duration="8617000" />
+      <workItem from="1592172674792" duration="1391000" />
     </task>
     <servers />
   </component>
@@ -90,6 +93,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="548" y="166" key="FileChooserDialogImpl" timestamp="1591899924912">

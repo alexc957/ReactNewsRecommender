@@ -14,6 +14,7 @@ import { useNavigate } from "@reach/router"
 import { onError } from "apollo-link-error";
 import SnackBarMessage from "../components/SnackBarMessage";
 import Loading from "../components/Loading";
+import NavBar from "../components/NavBar";
 
 const AUTH_USER = gql`
 mutation TokenAuth($username: String!, $password: String! ) {
@@ -51,6 +52,7 @@ export default function Login() {
   const [username, setUsername ] = useState('');
   const [password, setPassword ] = useState('');
 
+
   const loginUser = (event) => {
       event.preventDefault()
       console.log(username)
@@ -72,21 +74,24 @@ export default function Login() {
   }
 
   if (data) {
-    console.log('token?',data);
+    //console.log('token?',data);
     localStorage.setItem('token',data.tokenAuth.token);
     navigate('/');
   }
 
   if (error) {
     localStorage.setItem('token','');
-    console.log('error', error);
+    // console.log('error', error);
 
   //  return  <SnackBarMessage message={"there was an error while login"} openFlag={true} />
 
   }
   if (loading) {
-    localStorage.setItem('token','');
-    return <Loading />
+    // localStorage.setItem('token','');
+    return (<div>
+      <NavBar/>
+      <Loading />
+    </div>)
   }
 
   onError(({ graphQLErrors, networkError }) => {
@@ -103,58 +108,62 @@ export default function Login() {
 
 
   return (
-    <Container component="main" maxWidth="xs">
-      <CssBaseline />
-      <div className={classes.paper}>
-        <Avatar className={classes.avatar}>
-          <LockOutlinedIcon />
-        </Avatar>
-        <Typography component="h1" variant="h5">
-          Sign in
-        </Typography>
-        <form className={classes.form} noValidate onSubmit={loginUser}>
-          <TextField
-            variant="outlined"
-            margin="normal"
-            required
-            fullWidth
-            id="username"
-            label="username"
-            name="username"
-            autoComplete="username"
-            onChange= {(event) => setUsername(event.target.value)}
-            autoFocus
-          />
-          <TextField
-            variant="outlined"
-            margin="normal"
-            required
-            fullWidth
-            name="password"
-            label="Password"
-            type="password"
-            id="password"
-            onChange= {(event) => setPassword(event.target.value)}
-            autoComplete="current-password"
-          />
-        
-          <Button
-            type="submit"
-            fullWidth
-            variant="contained"
-            color="primary"
-            className={classes.submit}
+      <div>
+        <NavBar />
+        <Container component="main" maxWidth="xs">
+          <CssBaseline />
+          <div className={classes.paper}>
+            <Avatar className={classes.avatar}>
+              <LockOutlinedIcon />
+            </Avatar>
+            <Typography component="h1" variant="h5">
+              Sign in
+            </Typography>
+            <form className={classes.form} noValidate onSubmit={loginUser}>
+              <TextField
+                  variant="outlined"
+                  margin="normal"
+                  required
+                  fullWidth
+                  id="username"
+                  label="username"
+                  name="username"
+                  autoComplete="username"
+                  onChange= {(event) => setUsername(event.target.value)}
+                  autoFocus
+              />
+              <TextField
+                  variant="outlined"
+                  margin="normal"
+                  required
+                  fullWidth
+                  name="password"
+                  label="Password"
+                  type="password"
+                  id="password"
+                  onChange= {(event) => setPassword(event.target.value)}
+                  autoComplete="current-password"
+              />
 
-          >
-            Sign In
-          </Button>
-          
-        </form>
+              <Button
+                  type="submit"
+                  fullWidth
+                  variant="contained"
+                  color="primary"
+                  className={classes.submit}
+
+              >
+                Sign In
+              </Button>
+
+            </form>
+          </div>
+          {error? (
+              <SnackBarMessage message={"there was an error while login"} openFlag={true} />
+          ) : ''}
+
+        </Container>
       </div>
-      {error? (
-          <SnackBarMessage message={"there was an error while login"} openFlag={true} />
-      ) : ''}
-   
-    </Container>
+
   );
 }
