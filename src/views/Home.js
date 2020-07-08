@@ -36,6 +36,7 @@ const Home = () => {
     //onst [articles, setArticles] = useState([])
     const {loading,error,data} = useQuery(TOTAL_PAGES)
     const token = localStorage.getItem('token')
+    const [shouldHide, setShouldHIde] = useState(false)
     // console.log(token)
 
     if (error)  {
@@ -58,8 +59,9 @@ const Home = () => {
 
     const onSearchFunction = (e) => {
       e.preventDefault()
-      console.log(e)
+      //console.log(e)
       setOnSearch(search);
+      setShouldHIde(true)
 
     }
 
@@ -72,84 +74,87 @@ const Home = () => {
     return (
         <div>
             <NavBar />
-          <Container>
 
-            <br /> 
-            <form noValidate onSubmit={onSearchFunction}>
-                <TextField 
-                  variant="outlined"
-                  margin = "normal"
-                  id = "search"
-                  label = "Search"
-                  name="search"
-                  value = {search}
-                  
-                  onChange ={(event) => setSearch(event.target.value)}
-                />
-                <br />
-                <Button
-                type="submit"
-                
-                variant="contained"
-                color="primary"
-                
+            {shouldHide? '' : (
+                        <Container>
 
-              >
-                Search
-              </Button>
-          </form>    
-            <br />
-
-            <Typography variant="h4">
-              Recent Articles
-            </Typography> 
-
-          <Divider />
-
-          <RecentArticles />
-
-          <br />
-
-          <Divider />
-
-          <br />
-              <Typography variant="h4">
-                  Most Voted
-              </Typography>
-                <br/>
-              <Divider />
-
-              <MostVoted />
-              <br/>
-              <Divider />
-          <br />
-
-
-
-
-
-          {token? <Recommendations /> : ''}
-
-          <br />
-
-
-
-
-
-
-
-
-
-
-
-
-         
-  
-
-         
-
-
-          </Container>
+                        <br /> 
+                        <form noValidate onSubmit={onSearchFunction}>
+                            <TextField 
+                              variant="outlined"
+                              margin = "normal"
+                              id = "search"
+                              label = "Search"
+                              name="search"
+                              value = {search}
+                              
+                              onChange ={(event) => setSearch(event.target.value)}
+                            />
+                            <br />
+                            <Button
+                            type="submit"
+                            
+                            variant="contained"
+                            color="primary"
+                            
+            
+                          >
+                            Search
+                          </Button>
+                      </form>    
+                        <br />
+            
+                        <Typography variant="h4">
+                          Recent Articles
+                        </Typography> 
+            
+                      <Divider />
+            
+                      <RecentArticles />
+            
+                      <br />
+            
+                      <Divider />
+            
+                      <br />
+                          <Typography variant="h4">
+                              Most Voted
+                          </Typography>
+                            <br/>
+                          <Divider />
+            
+                          <MostVoted />
+                          <br/>
+                          <Divider />
+                      <br />
+            
+            
+            
+            
+            
+                      {token? <Recommendations /> : ''}
+            
+                      <br />
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                     
+              
+            
+                     
+            
+            
+                      </Container>
+            )}
          
            
          

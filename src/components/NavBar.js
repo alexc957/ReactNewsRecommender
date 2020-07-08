@@ -62,7 +62,7 @@ const NavBar = () => {
                 <Toolbar>
 
                         <Typography variant="h6"  component={'span'} className = {classes.title}>
-                            <Button  variant="contained" color="primary"  onClick={() => navigate('/')} disableElevation>
+                            <Button  variant="contained" color="primary" href="/" disableElevation>
                             News Recommender
                             </Button>
 
