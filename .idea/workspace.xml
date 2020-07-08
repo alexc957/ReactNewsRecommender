@@ -21,19 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="174fb0a2-a388-48dc-828a-b3398aa6bff0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/asset-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/precache-manifest.fc13e2cbd43615c121ebeca1ec6bee97.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/service-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/service-worker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/2.aa776a45.chunk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/2.aa776a45.chunk.js.LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/main.d164b928.chunk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/NavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NavBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Article.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Article.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/SignUp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/SignUp.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +63,12 @@
       <updated>1591899906054</updated>
       <workItem from="1591899907275" duration="20000" />
       <workItem from="1591899927942" duration="8617000" />
-      <workItem from="1592172674792" duration="1391000" />
+      <workItem from="1592172674792" duration="2291000" />
+      <workItem from="1592257852090" duration="312000" />
+      <workItem from="1592346427294" duration="18000" />
+      <workItem from="1592946121977" duration="600000" />
+      <workItem from="1593012431971" duration="599000" />
+      <workItem from="1593053998540" duration="417000" />
     </task>
     <servers />
   </component>
@@ -100,5 +92,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="548" y="166" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1591899924912" />
+    <state x="671" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1592963119800">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="671" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1592963119800" />
   </component>
 </project>
