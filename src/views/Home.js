@@ -74,36 +74,35 @@ const Home = () => {
     return (
         <div>
             <NavBar />
+            <Container>
+                <form noValidate onSubmit={onSearchFunction}>
+                    <TextField
+                        variant="outlined"
+                        margin = "normal"
+                        id = "search"
+                        label = "Search"
+                        name="search"
+                        value = {search}
 
+                        onChange ={(event) => setSearch(event.target.value)}
+                    />
+                    <br />
+                    <Button
+                        type="submit"
+
+                        variant="contained"
+                        color="primary"
+
+
+                    >
+                        Search
+                    </Button>
+                </form>
+            </Container>
             {shouldHide? '' : (
                         <Container>
 
-                        <br /> 
-                        <form noValidate onSubmit={onSearchFunction}>
-                            <TextField 
-                              variant="outlined"
-                              margin = "normal"
-                              id = "search"
-                              label = "Search"
-                              name="search"
-                              value = {search}
-                              
-                              onChange ={(event) => setSearch(event.target.value)}
-                            />
-                            <br />
-                            <Button
-                            type="submit"
-                            
-                            variant="contained"
-                            color="primary"
-                            
-            
-                          >
-                            Search
-                          </Button>
-                      </form>    
-                        <br />
-            
+
                         <Typography variant="h4">
                           Recent Articles
                         </Typography> 
