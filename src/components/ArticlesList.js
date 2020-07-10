@@ -12,7 +12,7 @@ import Loading from "./Loading";
 const SPACE_ID = '';
 const ACCESS_TOKEN = ''
 
-const GET_ARTICLES  = gql`
+export const GET_ARTICLES  = gql`
   query Articles ($search: String,$first: Int, $skip: Int) {
       articles(search: $search,first: $first, skip: $skip){
         id
