@@ -20,8 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="174fb0a2-a388-48dc-828a-b3398aa6bff0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/Views.test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/NavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NavBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/ArticlesComponents.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/ArticlesComponents.test.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,9 +110,10 @@
       <screen x="0" y="25" width="1920" height="1055" />
     </state>
     <state x="893" y="90" key="SettingsEditor/0.25.1920.1055@0.25.1920.1055" timestamp="1594242486501" />
-    <state x="671" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1592963119800">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="839" y="211" width="840" height="869" key="search.everywhere.popup" timestamp="1595256403281">
+      <screen x="0" y="25" width="1920" height="1055" />
     </state>
     <state x="671" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1592963119800" />
+    <state x="839" y="211" width="840" height="869" key="search.everywhere.popup/0.25.1920.1055@0.25.1920.1055" timestamp="1595256403281" />
   </component>
 </project>

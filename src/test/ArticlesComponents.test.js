@@ -1,12 +1,15 @@
 import ArticleCard from "../components/ArticleCard";
-import {createRenderer} from "react-dom/test-utils";
-import { render } from '@testing-library/react';
+
 import client from "../client";
 import { ApolloProvider } from '@apollo/react-hooks';
 import renderer from 'react-test-renderer';
 import React from 'react';
-import { MockedProvider } from '@apollo/react-testing';
-import ArticleList, {GET_ARTICLES} from "../components/ArticlesList";
+
+import ArticleList from "../components/ArticlesList";
+import RecentArticles from "../components/RecentArticles";
+import SimilarArticles from "../components/SimilarArticles";
+import Recommendations from "../components/Recommendations";
+import MostVoted from "../components/MostVoted";
 it('should test articleCard', function () {
     renderer.create(
         <ApolloProvider client={client}>
@@ -17,34 +20,6 @@ it('should test articleCard', function () {
 
 });
 
-const articlesMocks = [
-    {
-        request: {
-            query: GET_ARTICLES,
-            variables: {
-                search: "trump",
-                first: 2,
-                skip: 0
-
-            }
-        },
-        result: {
-            data:   [
-                {
-                    id: 1,
-                    title: "trump first article"
-                },
-                {
-                    id: 2,
-                    title: "trump second article"
-                }
-
-                    ],
-
-        },
-    },
-];
-
 it('should render article list without error', function () {
     renderer.create(
         <ApolloProvider client={client}>
@@ -54,3 +29,49 @@ it('should render article list without error', function () {
 
     )
 });
+
+
+// test recent articles
+
+it('should render recent articles', function () {
+    renderer.create(
+        <ApolloProvider client={client}>
+            <RecentArticles />
+        </ApolloProvider>
+    )
+
+});
+
+
+// test similar articles 
+
+it('should render similar articles', function () {
+    renderer.create(
+        <ApolloProvider client = {client} >
+            <SimilarArticles articleId={50}/>
+        </ApolloProvider>
+    )
+
+});
+
+
+// test recommendations
+it('should render recommendations ', function () {
+    renderer.create(
+        <ApolloProvider client={client}>
+            <Recommendations/>
+        </ApolloProvider>
+    )
+
+});
+
+// test most voted components
+
+it('should render most voted', function () {
+    renderer.create(
+        <ApolloProvider client={client}>
+            <MostVoted/>
+        </ApolloProvider>
+    )
+});
+
