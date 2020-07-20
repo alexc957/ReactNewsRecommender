@@ -48,6 +48,15 @@
     "react-test-renderer": "^16.13.1"
   },
   "jest": {
-    "coverageReporters": ["text"]
+    "coverageReporters": ["text"],
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}",
+      "!src/index.js",
+      "!src/serviceWorker.js",
+      "!src/components/NewArticleForm.js",
+      "!src/components/SnackBarMessage.js",
+      "!src/views/Login.js",
+      "!src/views/SignUp.js"
+    ]
   }
 }
