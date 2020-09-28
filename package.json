@@ -55,7 +55,7 @@
       "!src/serviceWorker.js",
       "!src/components/NewArticleForm.js",
       "!src/components/SnackBarMessage.js",
-      "!src/views/Login.js",
+      "!src/views/*.js",
       "!src/views/SignUp.js"
     ]
   }
