@@ -21,9 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="174fb0a2-a388-48dc-828a-b3398aa6bff0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ThumbsUp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ThumbsUp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/Views.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/Views.test.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +80,10 @@
       <workItem from="1594394387514" duration="5792000" />
       <workItem from="1594761799010" duration="646000" />
       <workItem from="1594833284341" duration="608000" />
-      <workItem from="1595273768164" duration="1358000" />
+      <workItem from="1595273768164" duration="3408000" />
+      <workItem from="1595779267716" duration="5000" />
+      <workItem from="1595951789015" duration="1354000" />
+      <workItem from="1598316522322" duration="7000" />
     </task>
     <servers />
   </component>
