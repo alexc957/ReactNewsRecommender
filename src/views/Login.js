@@ -163,11 +163,7 @@ export default function Login() {
             </form>
           </div>
           {error? (
-<<<<<<< HEAD
-              <SnackBarMessage message={"there was an error while login"} openFlag={true} />
-=======
               <SnackBarMessage message={"there was an error while login: Bad Credentials"} openFlag={flag} setFlag={setFlag} />
->>>>>>> desarrollo
           ) : ''}
 
         </Container>

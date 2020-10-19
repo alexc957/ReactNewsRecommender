@@ -113,14 +113,9 @@ const SignUp = () => {
 
     }
     if(error) {
-<<<<<<< HEAD
-        // console.log('error',error);
-         // return  <SnackBarMessage message={"there was an error while signing up "} openFlag={true} />
-=======
         console.log('error',error);
         //return <p>Error</p>
         // return  <SnackBarMessage message={"there was an error while signing up "} openFlag={true} />
->>>>>>> desarrollo
 
 
     }
@@ -195,18 +190,12 @@ const SignUp = () => {
 
                 {
                     error? (
-<<<<<<< HEAD
-                        <SnackBarMessage message={"there was an error while signing up "} openFlag={true} />
-                    ) : ''
-                }
-=======
                         <SnackBarMessage message={"there was an error while signing up "} openFlag={flag} setFlag={setFlag} />
                     ) : ''
                 }
                 {
                     emptyFields &&  <SnackBarMessage message={"Fill all the required fields"} openFlag={flag} setFlag={setFlag} />
                 }
->>>>>>> desarrollo
             </Container>
         </div>
     )

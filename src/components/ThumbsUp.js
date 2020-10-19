@@ -59,26 +59,10 @@ const ThumbsUp = ({ articleId }) => {
 
 
     }
-<<<<<<< HEAD
-    /*
-    if (loading) {
-        console.log('loading');
-
-    }*/
-
-    //if (error) {
-       // console.log(error);
-        // return  <SnackBarMessage message={"there was an error while fetching  data"} openFlag={true} />
-    // }
-
-    const createVoteEvent = (event)=> {
-        console.log(event)
-=======
 
 
     const createVoteEvent = (event)=> {
 
->>>>>>> desarrollo
         createVote({ variables: { articleId } })
 
     }
