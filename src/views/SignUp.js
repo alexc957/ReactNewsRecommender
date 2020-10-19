@@ -58,17 +58,31 @@ const SignUp = () => {
     const [email, setEmail ] = useState('');
     const [username, setUsername ] = useState('');
     const [password, setPassword ] = useState('');
+    const [emptyFields, setEmptyFields] = useState(false)
 
     const signUpUser = (event) => {
        event.preventDefault()
+        if(email && username && password){
+            console.log("helo")
 
-        createUser({
-            variables: {
-                email,
-                password,
-                username
-            }
-        })
+            createUser({
+                variables: {
+                    email,
+                    password,
+                    username
+                }
+            })
+            setEmptyFields(true)
+
+        } else {
+            setEmptyFields(true)
+        }
+        console.log(email)
+        console.log(username)
+        console.log(password)
+
+
+       
 
 
     }
@@ -87,8 +101,9 @@ const SignUp = () => {
 
     }
     if(error) {
-        // console.log('error',error);
-         // return  <SnackBarMessage message={"there was an error while signing up "} openFlag={true} />
+        console.log('error',error);
+        //return <p>Error</p>
+        // return  <SnackBarMessage message={"there was an error while signing up "} openFlag={true} />
 
 
     }
@@ -165,6 +180,9 @@ const SignUp = () => {
                     error? (
                         <SnackBarMessage message={"there was an error while signing up "} openFlag={true} />
                     ) : ''
+                }
+                {
+                    emptyFields && <SnackBarMessage message={"Fill all the required fields"} openFlag={true} />
                 }
             </Container>
         </div>
