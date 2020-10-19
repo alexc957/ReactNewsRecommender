@@ -59,6 +59,7 @@ const ThumbsUp = ({ articleId }) => {
 
 
     }
+<<<<<<< HEAD
     /*
     if (loading) {
         console.log('loading');
@@ -72,6 +73,12 @@ const ThumbsUp = ({ articleId }) => {
 
     const createVoteEvent = (event)=> {
         console.log(event)
+=======
+
+
+    const createVoteEvent = (event)=> {
+
+>>>>>>> desarrollo
         createVote({ variables: { articleId } })
 
     }

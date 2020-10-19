@@ -32,7 +32,11 @@ const useStyles = makeStyles((theme) => ({
 const NavBar = () => {
     // const theme = createMuiTheme();
     const classes = useStyles();
+<<<<<<< HEAD
     const navigate = useNavigate()
+=======
+    // const navigate = useNavigate()
+>>>>>>> desarrollo
     // const navigate = useNavigate();
     const [token, setToken] = useState('');
 
