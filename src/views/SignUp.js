@@ -54,11 +54,14 @@ const SignUp = () => {
     const classes = useStyles();
     const navigate = useNavigate();
     const [createUser, {data, loading, error}] = useMutation(CREATE_USER);
+    
 
+    const [flag, setFlag] = useState(true)
     const [email, setEmail ] = useState('');
     const [username, setUsername ] = useState('');
     const [password, setPassword ] = useState('');
     const [emptyFields, setEmptyFields] = useState(false)
+  
 
     const signUpUser = (event) => {
        event.preventDefault()
@@ -72,14 +75,23 @@ const SignUp = () => {
                     username
                 }
             })
-            setEmptyFields(true)
-
+            setEmptyFields(false)
+            setFlag(false)
+            console.log("entre aqui")
+            //setFlag(false)
         } else {
             setEmptyFields(true)
+            setFlag(true)
+            console.log("empty fields", emptyFields)
+            
+            console.log("o aqui?")
+
         }
+       // setEmptyFields(false)
         console.log(email)
         console.log(username)
         console.log(password)
+       
 
 
        
@@ -178,11 +190,11 @@ const SignUp = () => {
 
                 {
                     error? (
-                        <SnackBarMessage message={"there was an error while signing up "} openFlag={true} />
+                        <SnackBarMessage message={"there was an error while signing up "} openFlag={flag} setFlag={setFlag} />
                     ) : ''
                 }
                 {
-                    emptyFields && <SnackBarMessage message={"Fill all the required fields"} openFlag={true} />
+                    emptyFields &&  <SnackBarMessage message={"Fill all the required fields"} openFlag={flag} setFlag={setFlag} />
                 }
             </Container>
         </div>

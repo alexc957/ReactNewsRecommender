@@ -20,16 +20,19 @@ const useStyles = makeStyles((theme) => ({
     },
   }));
 
-const SnackBarMessage  = ({message, openFlag}) => {
-    const [open, setOpen] = useState(openFlag);
+const SnackBarMessage  = ({message, openFlag, setFlag}) => {
+    //const [open, setOpen] = useState(openFlag);
     const classes = useStyles();
+    console.log("se vuelve a renderizar, opneflag = ",openFlag);
 
     const handleClose = (event, reason) => {
-        if (reason === 'clickaway') {
+        /*if (reason === 'clickaway') {
+            
 
             return;
-        }
-        setOpen(false);
+        }*/
+        setFlag(false);
+       // setOpen(false);
     };
 
     return (
@@ -40,7 +43,7 @@ const SnackBarMessage  = ({message, openFlag}) => {
                     vertical: 'top',
                     horizontal: 'center',
                 }}
-                open={open}
+                open={openFlag}
                 autoHideDuration={6000}
                 onClose={handleClose}
                 

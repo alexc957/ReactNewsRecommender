@@ -51,9 +51,11 @@ export default function Login() {
 
   const [username, setUsername ] = useState('');
   const [password, setPassword ] = useState('');
+  const [flag,setFlag] = useState(true)
 
 
   const loginUser = (event) => {
+      setFlag(true)
       event.preventDefault()
       console.log(username)
       console.log(password)
@@ -76,11 +78,13 @@ export default function Login() {
   if (data) {
     //console.log('token?',data);
     localStorage.setItem('token',data.tokenAuth.token);
+    //setFlag(false)
     navigate('/');
   }
 
   if (error) {
     localStorage.setItem('token','');
+    //setFlag(true)
     // console.log('error', error);
 
   //  return  <SnackBarMessage message={"there was an error while login"} openFlag={true} />
@@ -94,7 +98,7 @@ export default function Login() {
     </div>)
   }
 
-  onError(({ graphQLErrors, networkError }) => {
+   onError(({ graphQLErrors, networkError }) => {
     if (graphQLErrors)
       graphQLErrors.map(({ message, locations, path }) =>
         console.log(
@@ -103,7 +107,7 @@ export default function Login() {
       );
   
     if (networkError) console.log(`[Network error]: ${networkError}`);
-  });
+  }); 
 
 
 
@@ -159,7 +163,7 @@ export default function Login() {
             </form>
           </div>
           {error? (
-              <SnackBarMessage message={"there was an error while login"} openFlag={true} />
+              <SnackBarMessage message={"there was an error while login: Bad Credentials"} openFlag={flag} setFlag={setFlag} />
           ) : ''}
 
         </Container>
