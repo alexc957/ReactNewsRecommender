@@ -12,6 +12,8 @@ query {
         article {
             id
             title
+            category
+            dateUploaded
             
         } 
     }

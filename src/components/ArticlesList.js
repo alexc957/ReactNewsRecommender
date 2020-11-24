@@ -17,6 +17,8 @@ export const GET_ARTICLES  = gql`
       articles(search: $search,first: $first, skip: $skip){
         id
         title 
+        category
+        dateUploaded
       }
       
       
@@ -60,7 +62,13 @@ const ArticleList = ({ search, page }) => {
                     <Grid container spacing ={2} >
                         { data.articles.map(article => (
                             <Grid item xs={12} sm={6} lg={4} xl ={3} key ={article.id} >
-                                <ArticleCard title={article.title}  articleId={article.id} />
+                                 <ArticleCard
+
+                                    id={article.id}
+                            
+                                    title={article.title}  
+                                  dateUploaded={article.dateUploaded} 
+                                  category={article.category} />
                             </Grid>
                         ))}
                     </Grid>

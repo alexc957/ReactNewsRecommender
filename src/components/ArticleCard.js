@@ -1,27 +1,58 @@
-import React from 'react'
-import Card from '@material-ui/core/Card'
-import CardActions from '@material-ui/core/CardActions'
-import  CardContent  from '@material-ui/core/CardContent'
-import CardMedia from '@material-ui/core/CardMedia'
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import Card from '@material-ui/core/Card';
+import CardActionArea from '@material-ui/core/CardActionArea';
 
-import Button from '@material-ui/core/Button';
+import CardContent from '@material-ui/core/CardContent';
+
 import Typography from '@material-ui/core/Typography';
+import Avatar from '@material-ui/core/Avatar';
 
-import { Link } from '@reach/router';
-import { Divider } from '@material-ui/core'
-const ArticleCard = ({ title, articleId }) => {
-    return (
-        <Card  style = {{margin: 24, height: 140, minWidth: "200px"}}>
-            <Typography variant ="subtitle1">
-              {title}
-            </Typography>
-            <Divider />
-            <CardContent>
-            <Link to={`/article/${articleId}`} > See More </Link>
-            </CardContent>           
-        </Card>
-    )
+import CardHeader from '@material-ui/core/CardHeader';
+import {navigate} from '@reach/router';
+const useStyles = makeStyles({
+  root: {
+    maxWidth: 400,
+    minWidth: 300,
+    minHeight: 120,
+    maxHeight: 220,
+    height: 200,
+  
+   
+  },
+  media: {
+    height: 140,
+  },
+});
 
+export default function ArticleCard({id, title, dateUploaded, category}) {
+  const classes = useStyles();
+
+  return (
+    <Card className={classes.root}>
+
+<CardHeader
+        avatar={
+          <Avatar aria-label="recipe">
+            N
+          </Avatar>
+        }
+        
+        title={category}
+        subheader={dateUploaded}
+      />
+      
+      <CardActionArea onClick={()=>{navigate(`/article/${id}`)}}>
+
+     
+        <CardContent>
+          <Typography  component="p">
+            {title}
+          </Typography>
+          
+        </CardContent>
+      </CardActionArea>
+     
+    </Card>
+  );
 }
-
-export default ArticleCard;

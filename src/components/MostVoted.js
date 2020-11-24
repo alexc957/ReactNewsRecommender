@@ -10,6 +10,8 @@ const MOST_VOTED = gql`
         mostVoted {
             id
             title
+            category
+            dateUploaded
         }
     }
 `

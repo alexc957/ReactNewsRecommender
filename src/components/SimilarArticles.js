@@ -14,6 +14,7 @@ const SIMILAR_ARTICLES = gql`
                 id
                 title
                 category
+                dateUploaded
             }
         }
     }

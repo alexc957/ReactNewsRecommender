@@ -10,6 +10,8 @@ query {
   recentArticles {
     id
     title
+    category
+    dateUploaded
   }
 }
 `
