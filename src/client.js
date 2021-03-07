@@ -6,7 +6,7 @@ import gql from 'graphql-tag'
 import { setContext } from 'apollo-link-context'
 
 
-const link = new createHttpLink({uri: 'http://localhost:8000/graphql/'})
+const link = new createHttpLink({uri: 'https://tranquil-mountain-27611.herokuapp.com/graphql/'})
 
 const cache = new InMemoryCache()
 

@@ -59,11 +59,11 @@ const useStyles = makeStyles((theme) => ({
               <GridListTile key={rec.id} style={{ minWidth: "350px"}}>
                
                <ArticleCard  
-                                id={article.id}
+                                id={rec.id}
                             
-                                title={article.title}  
-                                dateUploaded={article.dateUploaded} 
-                                category={article.category} />
+                                title={rec.title}  
+                                dateUploaded={rec.dateUploaded} 
+                                category={rec.category} />
                 
               </GridListTile>
             ))}

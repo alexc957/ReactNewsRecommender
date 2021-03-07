@@ -66,37 +66,46 @@ const Home = () => {
     }
 
     const handleClick = (pageNumber) => {
-        console.log(`active page is  ${pageNumber}`)
-        setOffSet(pageNumber)
+               setOffSet(pageNumber)
 
     }
 
     return (
         <div>
             <NavBar />
-            <Container>
+            <Container  style={{marginBottom: '30px', marginTop: '30px'}}>
                 <form noValidate onSubmit={onSearchFunction}>
+                    <div style={{display: 'flex'}}>
+                        
                     <TextField
-                        variant="outlined"
+                        variant="filled"
+                        autoFocus={true}
                         margin = "normal"
                         id = "search"
                         label = "Search"
                         name="search"
                         value = {search}
+                        fullWidth={true}
 
                         onChange ={(event) => setSearch(event.target.value)}
                     />
-                    <br />
-                    <Button
-                        type="submit"
+                    <span style={{marginTop: "25px", marginLeft: '10px'}}>
+                        <Button
 
-                        variant="contained"
-                        color="primary"
+                            type="submit"
+
+                            variant="contained"
+                            color="primary"
+                            size="medium"
 
 
-                    >
-                        Search
-                    </Button>
+                        >
+                            Search
+                        </Button>
+                    </span>
+
+                    </div>
+                    
                 </form>
             </Container>
             {shouldHide? '' : (
@@ -106,25 +115,26 @@ const Home = () => {
                         <Typography variant="h4">
                           Recent Articles
                         </Typography> 
+                        <br />
             
-                      <Divider />
+                      
             
                       <RecentArticles />
             
                       <br />
             
-                      <Divider />
+                      <Divider style={{height: '3px'}} />
             
                       <br />
                           <Typography variant="h4">
                               Most Voted
                           </Typography>
                             <br/>
-                          <Divider />
+                         
             
                           <MostVoted />
                           <br/>
-                          <Divider />
+                          <Divider style={{height: '3px'}} />
                       <br />
             
             
