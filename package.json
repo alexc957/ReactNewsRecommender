@@ -13,14 +13,14 @@
     "@testing-library/user-event": "^7.2.1",
     "apollo-boost": "^0.4.7",
     "apollo-link-context": "^1.0.19",
-    "express": "^4.17.1",
+    "express": "^4.22.1",
     "express-favicon": "^2.0.1",
     "graphql": "^15.0.0",
     "material-ui-flat-pagination": "^4.1.0",
     "path": "^0.12.7",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "^3.4.3"
+    "react-scripts": "^5.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
